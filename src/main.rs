@@ -20,7 +20,7 @@ fn main() {
 
     let elf_inventories = split_sting.collect::<Vec<&str>>();
     
-    for s in split_sting
+    for s in elf_inventories
     {
         let new_string = s.split("\n");
         for i in new_string{
