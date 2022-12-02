@@ -19,13 +19,23 @@ fn main() {
     let mut split_sting = s.split("\n\n");
 
     let elf_inventories = split_sting.collect::<Vec<&str>>();
-    
+
+    let mut elf_number =0;
+    let mut the_fat_elf = 0;
+    let mut fat_elf_cals = 0;
+
     for s in elf_inventories
     {
+        print!("elf {} has these items:\n",elf_number);
+        let mut total_cals = 0;
         let new_string = s.split("\n");
         for i in new_string{
             print!("{}\t",i);
+            let item_cals:i32= i.trim().parse().expect("needed a number");
+            total_cals = total_cals + item_cals;
         }
+        print!("\nelf has {} calories\n",total_cals);
         print!("\n");
+        elf_number = elf_number+1;
     }
 }
