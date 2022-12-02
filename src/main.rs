@@ -16,7 +16,10 @@ fn main() {
         Ok(_)=> print!("{} contains: \n{}",display,s),
     }
 
-    let mut split_sting = s.split("\n");
+    let mut split_sting = s.split("\n\n");
 
-    
+    for s in split_sting
+    {
+        print!("{}",s);
+    }
 }
